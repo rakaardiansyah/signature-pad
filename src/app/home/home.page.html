@@ -1,0 +1,77 @@
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="end">
+        <ion-button color="light" expand="full" [disabled]="isCanvasBlank()" (click)="save()"> Save</ion-button>
+        <ion-button color="light" expand="full" (click)="undo()"> Undo</ion-button>
+        <ion-button color="light" expand="full" (click)="clear()"> Clear</ion-button>
+      </ion-buttons>
+      <ion-title>
+        Signature Pad
+      </ion-title>
+    </ion-toolbar>
+    
+    <ion-card-content>
+      <div class="signature-container">
+        <canvas class="signature-pad-canvas" #canvas style="touch-action: none;"></canvas>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  
+  <div class="bguploadp">
+    <ion-row>
+      <ion-col size="5">
+        <div class="bgpndmping1">
+          <div class="custom-file-input-container">
+            <ion-button class="custom-file-input-button" (click)="fileInput.click()">
+              <ion-icon name="attach" class="custom-icon"></ion-icon>
+              Upload Foto
+            </ion-button>
+            <input type="file" #fileInput (change)="onFileSelected($event)" accept="image/*" class="custom-file-input">
+          </div>
+        </div>
+      </ion-col>
+      <ion-col size="7">
+        <div class="bgpndmping2">
+          <ion-card *ngIf="selectedFile">
+            <ion-card-content>
+              <ion-list>
+                <ion-row>
+                  <ion-note>{{ selectedFile.name }}</ion-note>
+                </ion-row>
+                <ion-row>
+                  <ion-note>{{ selectedFile.type }}</ion-note>
+                </ion-row>
+              </ion-list>
+            </ion-card-content>
+          </ion-card> 
+        </div>
+      </ion-col>  
+    </ion-row>
+  </div>
+  
+  <div class="termsncondit" lines="none">
+    <ion-label class="confirm">
+      <ion-checkbox class="checkbox" slot="start"></ion-checkbox>
+      <div class="colorred">*</div>Dengan ini saya sudah membaca, memahami dan setuju dengan peraturan paylater Kopkarsyah BSI
+    </ion-label>          
+  </div>
+  
+  <ion-row class="rowbottom">
+    <ion-col size="6">
+      <ion-button class="btncancel" fill="clear" expand="block">
+        <ion-label color>Batal</ion-label>
+      </ion-button>
+    </ion-col>  
+  
+    <ion-col size="6">
+      <ion-button class="btnsubmit" fill="clear" expand="block" (click)="btnSubmit()">
+        <ion-label color>Submit</ion-label>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
+
+

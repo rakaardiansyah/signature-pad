@@ -1,0 +1,7 @@
+{
+  "name": "signature-pad",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

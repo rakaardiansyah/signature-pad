@@ -1,0 +1,165 @@
+ion-content {
+  font-family: 'Poppins', sans-serif;
+  --background: #f0f0f2;
+
+  ion-card {
+    margin: auto;
+    margin-top: 0px;
+  
+    .signature-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    
+      canvas {
+        width: 100%;
+        height: 285px;
+        border: 1px dashed gray;
+      }
+    
+    }
+    
+  }
+  
+  .bguploadp{
+    padding: 10px 10px;
+    justify-content: center;
+    text-align: center;   
+    display: flex;
+    flex-direction: column;
+  
+    ion-row{
+  
+        ion-col{
+            justify-content: center;
+            align-items: center; 
+            display: flex;
+            flex-direction: column;
+  
+            .bgpndmping1{
+                width: 100%;
+                padding-left: 12px;
+                justify-content: left;
+                text-align: left; 
+                flex-direction: column;
+            
+                .custom-file-input-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                  }
+                  
+                .custom-file-input-button {
+                    font-size: smaller;
+                    font-weight: 300;
+                    --background: var(--ion-color-secondary);
+                    --color: white;
+                    --border-radius: 10px;
+                }
+                
+                .custom-icon {
+                    margin-end: 8px;
+                }
+                
+                .custom-file-input {
+                    display: none;
+                }
+                
+            }
+                
+            .bgpndmping2{
+                justify-content: center;
+                align-items: center; 
+                text-align: center;   
+                display: flex;
+                flex-direction: column;
+                border-radius: 8px;
+                // background: var(--Gray1, #EFEFEF);
+  
+                ion-note{
+                    font-size: smaller;
+                }
+            }
+        }
+    }     
+  }
+  
+  .termsncondit{
+    margin: 0px 20px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    justify-content: left;
+    text-align: center;   
+    display: grid;
+  
+    .confirm {
+        font-size: 12px; 
+        justify-content: left;
+        text-align: left;   
+        display: flex;
+        color:var(--ion-color-text);
+  
+        .checkbox{
+            height: 20px;
+            width: 30px;
+            margin-top: 3px;
+            margin-right: 7px;
+            justify-content: left;
+            text-align: left;   
+            display: flex;
+        }
+  
+        .colorred{
+            color: #BB010E;
+        }
+    
+    }
+  
+  }
+  
+  .rowbottom{
+    margin: 0px 12px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    justify-content: left;
+    text-align: center;
+  
+    ion-col{   
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    
+        .btncancel {    
+            width: 100%;
+            height: 45px;
+            border-radius: 10px;
+            --background: #BB010E;
+            --color: #ffffff;
+            --border-radius: 8px; 
+            
+            ion-label {
+                font-size: 16px;
+                color: #fff;                                 
+            }
+        }
+  
+        .btnsubmit {    
+            width: 100%;
+            height: 45px;
+            border-radius: 10px;
+            --background: var(--ion-color-secondary);
+            --color: #ffffff;
+            --border-radius: 8px;   
+            
+            ion-label {
+                font-size: 16px;
+                color: #fff;                                 
+            }
+        }
+  
+    }
+  }   
+
+}
+
